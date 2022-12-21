@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.22fa4b47.css",
-    "main.js": "/static/js/main.55e840c6.js",
-    "static/media/weLoveMovies.png": "/static/media/weLoveMovies.7f42bd52ff7a7b5ce586.png",
-    "static/media/grabDash.png": "/static/media/grabDash.2221d2a09fdc99981509.png",
-    "static/media/dashboard.png": "/static/media/dashboard.2cecbe22f93f6a12ee18.png",
-    "index.html": "/index.html",
-    "main.22fa4b47.css.map": "/static/css/main.22fa4b47.css.map",
-    "main.55e840c6.js.map": "/static/js/main.55e840c6.js.map"
+    "main.css": "/myportfolio/static/css/main.22fa4b47.css",
+    "main.js": "/myportfolio/static/js/main.86127dd2.js",
+    "static/media/weLoveMovies.png": "/myportfolio/static/media/weLoveMovies.7f42bd52ff7a7b5ce586.png",
+    "static/media/grabDash.png": "/myportfolio/static/media/grabDash.2221d2a09fdc99981509.png",
+    "static/media/dashboard.png": "/myportfolio/static/media/dashboard.2cecbe22f93f6a12ee18.png",
+    "index.html": "/myportfolio/index.html",
+    "main.22fa4b47.css.map": "/myportfolio/static/css/main.22fa4b47.css.map",
+    "main.86127dd2.js.map": "/myportfolio/static/js/main.86127dd2.js.map"
   },
   "entrypoints": [
     "static/css/main.22fa4b47.css",
-    "static/js/main.55e840c6.js"
+    "static/js/main.86127dd2.js"
   ]
 }
