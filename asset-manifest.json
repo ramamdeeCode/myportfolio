@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/myportfolio/static/css/main.117d82ea.css",
-    "main.js": "/myportfolio/static/js/main.9a5fa727.js",
-    "static/media/weLoveMovies.png": "/myportfolio/static/media/weLoveMovies.7f42bd52ff7a7b5ce586.png",
-    "static/media/grabDash.png": "/myportfolio/static/media/grabDash.2221d2a09fdc99981509.png",
-    "static/media/dashboard.png": "/myportfolio/static/media/dashboard.2cecbe22f93f6a12ee18.png",
-    "index.html": "/myportfolio/index.html",
-    "main.117d82ea.css.map": "/myportfolio/static/css/main.117d82ea.css.map",
-    "main.9a5fa727.js.map": "/myportfolio/static/js/main.9a5fa727.js.map"
+    "main.css": "/static/css/main.22fa4b47.css",
+    "main.js": "/static/js/main.55e840c6.js",
+    "static/media/weLoveMovies.png": "/static/media/weLoveMovies.7f42bd52ff7a7b5ce586.png",
+    "static/media/grabDash.png": "/static/media/grabDash.2221d2a09fdc99981509.png",
+    "static/media/dashboard.png": "/static/media/dashboard.2cecbe22f93f6a12ee18.png",
+    "index.html": "/index.html",
+    "main.22fa4b47.css.map": "/static/css/main.22fa4b47.css.map",
+    "main.55e840c6.js.map": "/static/js/main.55e840c6.js.map"
   },
   "entrypoints": [
-    "static/css/main.117d82ea.css",
-    "static/js/main.9a5fa727.js"
+    "static/css/main.22fa4b47.css",
+    "static/js/main.55e840c6.js"
   ]
 }
