@@ -1,6 +1,6 @@
 {
-  "homepage": "https://ramamdeeCode.github.io/",
   "name": "myportfolio",
+  "homepage": "https://ramamdeeCode.github.io/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
