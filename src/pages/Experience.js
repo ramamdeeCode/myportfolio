@@ -60,12 +60,20 @@ function Experience() {
           icon={<SchoolIcon />}
         >
           <h3 className="vertical-timeline-element-title">Thinkful</h3>
-
           <h4 className="vertical-timeline-element-subtitle">
             Software Engineering Program
           </h4>
-
-          <p> Computer Science</p>
+          <p> Full Stack Web Developer Training</p>
+          <ul>
+            <li>
+              Remote web development program focused on learning HTML, CSS,
+              JavaScript, SQL, and associated frameworks.
+            </li>
+            <li>
+              Designed mobile-first full-stack applications from conception to
+              deployment, while learning industry best practices.
+            </li>
+          </ul>
         </VerticalTimelineElement>
       </VerticalTimeline>
     </div>
