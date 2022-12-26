@@ -9,6 +9,7 @@
   width: 100%;
   height: calc(100vh - 100px);
   display: flex;
+  
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -25,6 +26,7 @@
 }
 
 .about .prompt {
+  
   width: 40%;
   font-size: 30px;
 }
@@ -58,7 +60,7 @@
 
 @media only screen and (max-width: 600px) {
   .about h2 {
-    font-size: 40px;
+    font-size: 38px;
   }
 
   .about .prompt {
@@ -76,5 +78,31 @@
 
   .skills h2 {
     font-size: 30px;
+  }
+}
+/* ipad Mini Portrait */
+@media only screen and (max-width:768px) {
+  .about h2 {
+    font-size: 40px;
+    
+  }
+
+  .about .prompt {
+    margin-top: 10px;
+    font-size: 20px;
+    width: 80%;
+  }
+}
+
+/* ipad Mini Landscape */
+@media only screen and (max-width:1024px) {
+  .about h2 {
+    font-size: 40px;
+  }
+
+  .about .prompt {
+    margin-top: 10px;
+    font-size: 20px;
+    width: 80%;
   }
 }

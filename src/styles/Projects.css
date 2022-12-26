@@ -5,6 +5,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  
+  
 }
 .projects .projectTitle {
   text-align: center;
@@ -14,11 +16,13 @@
 }
 
 .projectList {
-  width: 70vw;
+  width: 80vw;
   height: auto;
   display: grid;
+  flex-direction: row;
   grid-template-columns: 1fr 1fr 1fr;
   place-items: center;
+  
 }
 
 /* MENU ITEM STYLING */
@@ -49,10 +53,16 @@
 
 .projectItem h1 {
   font-size: 25px;
+  
 }
 
 .projectGit{
   text-align: center;
+  margin-bottom: 50px;
+  color: black;
+}
+.projectGitLink{
+  color: black;
 }
 
 @media only screen and (max-width: 1300px) {
