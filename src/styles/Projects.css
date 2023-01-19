@@ -1,8 +1,8 @@
 .projects {
-  width: 100%;
-  height: auto;
+  /* width: 100%; */
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content:flex-start;
   align-items: center;
   flex-direction: column;
   
@@ -58,11 +58,19 @@
 
 .projectGit{
   text-align: center;
-  margin-bottom: 50px;
-  color: black;
+  /* margin-bottom: 50px; */
+  padding-top: .2rem;
+  padding-bottom: 1.5rem;
+  
 }
 .projectGitLink{
+  text-decoration: none;
+  list-style: none;
+}
+.gitHubLink{
   color: black;
+  font-size: 70px;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 1300px) {

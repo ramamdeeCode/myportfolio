@@ -18,7 +18,7 @@ function ProjectItem({ image, name, id, url, gitHubUrl }) {
       </div>
       <div className="projectGit">
         <a href={gitHubUrl} className="projectGitLink">
-          <Github />
+          <Github className="gitHubLink" />
         </a>
       </div>
     </div>
