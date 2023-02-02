@@ -12,7 +12,7 @@ function Home() {
         <div className="prompt">
           <p>
             A software developer with a passion for learning and creating
-            products positively change the world.{" "}
+            products positively change the world.
           </p>
           <a href="https://www.linkedin.com/in/ramadhani-mdee/">
             <LinkedInIcon />
@@ -26,22 +26,25 @@ function Home() {
         </div>
       </div>
       <div className="skills">
-        <h1> Skills</h1>
         <ol className="list">
+          <h1> Skills</h1>
           <li className="item">
             <h2> Front-End</h2>
-            <span>
-              ReactJS, HTML, CSS, NPM, BootStrap, MaterialUI, Mocha, Chai, Git,
-              GitHub
-            </span>
+            <span>JavaScript , React(+ Router),React Hooks, HTML5, CSS3.</span>
           </li>
           <li className="item">
             <h2>Back-End</h2>
-            <span>NodeJS, ExpressJS, PostgreSQL, MySQL</span>
+            <span>Node.js PostgreSQL, Express.</span>
           </li>
           <li className="item">
-            <h2>Languages</h2>
-            <span>JavaScript, Java, Python,</span>
+            <h2>Additional Tools</h2>
+            <span>Mocha, Chai, Git, GitHub, Heroku, Vercel</span>
+          </li>
+          <li className="item">
+            <h2>Additional Skills</h2>
+            <span>
+              RESTful APIs, Unit testing, Algorithms, and Data Structures, Java.
+            </span>
           </li>
         </ol>
       </div>
