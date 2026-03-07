@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -6,15 +6,39 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import SchoolIcon from "@mui/icons-material/School";
 import WorkIcon from "@mui/icons-material/Work";
+import "../styles/Experience.css";
 
 function Experience() {
+  const titleRef = useRef(null);
+
+  useEffect(() => {
+    const el = titleRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          el.classList.add("revealed");
+        }
+      },
+      { threshold: 0.2 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="experience">
-      <VerticalTimeline lineColor="#3e497a">
+      <h1 className="experience__title reveal" ref={titleRef}>
+        Experience
+      </h1>
+      <p className="experience__subtitle reveal">
+        Education and work history.
+      </p>
+      <VerticalTimeline lineColor="var(--color-border)">
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
-          date="Feb 2022 - Jan 2023"
-          iconStyle={{ background: "#177e89", color: "#fff" }}
+          date="Feb 2022 – Jan 2023"
+          iconStyle={{ background: "var(--color-accent)", color: "#fff" }}
           icon={<SchoolIcon />}
         >
           <h3 className="vertical-timeline-element-title">Thinkful</h3>
@@ -38,8 +62,8 @@ function Experience() {
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          date="Feb 2019 -present"
-          iconStyle={{ background: "#e76f51", color: "#fff" }}
+          date="Feb 2019 – present"
+          iconStyle={{ background: "var(--color-accent-secondary)", color: "#fff" }}
           icon={<WorkIcon />}
         >
           <h3 className="vertical-timeline-element-title">
@@ -61,8 +85,8 @@ function Experience() {
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          date="Dec 2019 -present"
-          iconStyle={{ background: "#e76f51", color: "#fff" }}
+          date="Dec 2019 – present"
+          iconStyle={{ background: "var(--color-accent-secondary)", color: "#fff" }}
           icon={<WorkIcon />}
         >
           <h3 className="vertical-timeline-element-title">
@@ -97,8 +121,8 @@ function Experience() {
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          date="Oct 2015 - Dec 2017"
-          iconStyle={{ background: "#e76f51", color: "#fff" }}
+          date="Oct 2015 – Dec 2017"
+          iconStyle={{ background: "var(--color-accent-secondary)", color: "#fff" }}
           icon={<WorkIcon />}
         >
           <h3 className="vertical-timeline-element-title">
@@ -127,8 +151,8 @@ function Experience() {
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
-          date="Aug 2011 - Jun 2014"
-          iconStyle={{ background: "#177e89", color: "#fff" }}
+          date="Aug 2011 – Jun 2014"
+          iconStyle={{ background: "var(--color-accent)", color: "#fff" }}
           icon={<SchoolIcon />}
         >
           <h3 className="vertical-timeline-element-title">

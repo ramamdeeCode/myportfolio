@@ -1,27 +1,56 @@
-import React from "react";
-// import { useNavigate } from "react-router-dom";
-import Github from "@mui/icons-material/GitHub";
+import React, { useEffect, useRef } from "react";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import GithubIcon from "@mui/icons-material/GitHub";
 
-function ProjectItem({ image, name, id, url, gitHubUrl }) {
-  // const navigate = useNavigate();
+function ProjectItem({ image, name, url, gitHubUrl }) {
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    const el = cardRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          el.classList.add("revealed");
+        }
+      },
+      { threshold: 0.1 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div>
-      <div
-        className="projectItem"
-        onClick={() => {
-          //navigate("/project/" + id);
-          window.location.href = url;
-        }}
+    <article className="project-card reveal" ref={cardRef}>
+      <a
+        href={url}
+        className="project-card__link"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        <div style={{ backgroundImage: `url(${image})` }} className="bgImage" />
-        <h1> {name} </h1>
-      </div>
-      <div className="projectGit">
-        <a href={gitHubUrl} className="projectGitLink">
-          <Github className="gitHubLink" />
+        <div
+          className="project-card__image"
+          style={{ backgroundImage: `url(${image})` }}
+        />
+        <div className="project-card__overlay">
+          <span className="project-card__cta">View project</span>
+          <OpenInNewIcon className="project-card__icon" />
+        </div>
+      </a>
+      <div className="project-card__body">
+        <h3 className="project-card__title">{name}</h3>
+        <a
+          href={gitHubUrl}
+          className="project-card__github"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`${name} source code on GitHub`}
+        >
+          <GithubIcon />
+          <span>Source</span>
         </a>
       </div>
-    </div>
+    </article>
   );
 }
 

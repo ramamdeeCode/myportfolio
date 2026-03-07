@@ -1,96 +1,155 @@
 .projects {
-  /* width: 100%; */
-  min-height: 100vh;
-  display: flex;
-  justify-content:flex-start;
-  align-items: center;
-  flex-direction: column;
-  
-  
-}
-.projects .projectTitle {
-  text-align: center;
-  color: #3e497a;
-  font-size: 60px;
-  font-weight: bolder;
-}
-
-.projectList {
-  width: 80vw;
-  height: auto;
-  display: grid;
-  flex-direction: row;
-  grid-template-columns: 1fr 1fr 1fr;
-  place-items: center;
-  
-}
-
-/* MENU ITEM STYLING */
-
-.projectItem {
-  border-radius: 15px;
-  width: 300px;
-  height: 300px;
-  margin: 40px;
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-  text-align: center;
-}
-.projectItem:hover {
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
-  transition: 0.3s ease-in;
-  cursor: pointer;
-}
-
-.projectItem .bgImage {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
   width: 100%;
-  height: 200px;
+}
+
+.projects__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.projects__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin: 0 0 0.5rem;
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.projects__subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  margin: 0;
+  transition: opacity var(--transition-slow), transform var(--transition-slow);
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  place-items: start center;
+}
+
+/* Project card */
+.project-card {
+  width: 100%;
+  max-width: 380px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: opacity var(--transition-slow), transform var(--transition-slow),
+    box-shadow var(--transition-base), border-color var(--transition-fast);
+}
+
+.project-card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-accent-muted);
+}
+
+.project-card__link {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.project-card__image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  transition: transform var(--transition-slow);
 }
 
-.projectItem h1 {
-  font-size: 25px;
-  
+.project-card__link:hover .project-card__image {
+  transform: scale(1.05);
 }
 
-.projectGit{
-  text-align: center;
-  /* margin-bottom: 50px; */
-  padding-top: .2rem;
-  padding-bottom: 1.5rem;
-  
+.project-card__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity var(--transition-base);
 }
-.projectGitLink{
+
+.project-card__link:hover .project-card__overlay,
+.project-card__link:focus-visible .project-card__overlay {
+  opacity: 1;
+}
+
+.project-card__cta {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+.project-card__icon {
+  font-size: 1.2rem !important;
+  color: #fff;
+}
+
+.project-card__body {
+  padding: 1.25rem 1.25rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.project-card__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--color-text);
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+}
+
+.project-card__github {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
   text-decoration: none;
-  list-style: none;
-}
-.gitHubLink{
-  color: black;
-  font-size: 70px;
-  cursor: pointer;
+  white-space: nowrap;
+  transition: color var(--transition-fast);
 }
 
-@media only screen and (max-width: 1300px) {
-  .projectList {
-    grid-template-columns: 1fr 1fr;
+.project-card__github:hover {
+  color: var(--color-accent);
+}
+
+.project-card__github svg {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 600px) {
+  .projects {
+    padding: 2rem 1rem 3rem;
   }
-}
 
-@media only screen and (max-width: 800px) {
-  .projectList {
+  .projects__grid {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
-}
 
-@media only screen and (max-width: 800px) {
-  .projectList {
-    width: 100%;
-  }
-  .projectItem {
-    width: 300px;
-    height: 300px;
+  .project-card {
+    max-width: 100%;
   }
 }

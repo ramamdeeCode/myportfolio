@@ -6,20 +6,38 @@ import "../styles/Footer.css";
 
 function Footer() {
   return (
-    <div className="footer">
-      <div className="socialMedia">
-        <a href="https://www.linkedin.com/in/ramadhani-mdee/">
-          <LinkedInIcon />
-        </a>
-        <a href="mailto:rmdee05@gmail.com">
-          <EmailIcon />
-        </a>
-        <a href="https://github.com/ramamdeeCode?tab=repositories">
-          <GithubIcon />
-        </a>
+    <footer className="footer">
+      <div className="footer__inner">
+        <div className="footer__social">
+          <a
+            href="https://www.linkedin.com/in/ramadhani-mdee/"
+            className="footer__link"
+            aria-label="LinkedIn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LinkedInIcon />
+          </a>
+          <a
+            href="mailto:rmdee05@gmail.com"
+            className="footer__link"
+            aria-label="Email"
+          >
+            <EmailIcon />
+          </a>
+          <a
+            href="https://github.com/ramamdeeCode?tab=repositories"
+            className="footer__link"
+            aria-label="GitHub"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GithubIcon />
+          </a>
+        </div>
+        <p className="footer__copy">&copy; 2026 Ramadhani Mdee</p>
       </div>
-      <p> &copy; 2023 ramadhani mdee</p>
-    </div>
+    </footer>
   );
 }
 
