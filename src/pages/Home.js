@@ -29,14 +29,16 @@ function Home() {
     <div className="home">
       <section className="hero" ref={heroRef}>
         <div className="hero__content reveal">
-          <p className="hero__label">Software Developer</p>
+          <p className="hero__label">Full-Stack Software Developer</p>
           <h1 className="hero__title">
             Hi, I'm <span className="hero__name">Ramadhani</span>
           </h1>
           <p className="hero__tagline">
-            I build products that positively change the world. Focused on
-            full-stack web development with a passion for learning and clean,
-            user-centered solutions.
+            I build technology that makes a meaningful impact. I specialize in
+            full-stack web development, creating secure, scalable, and
+            user-centered applications. Passionate about continuous learning,
+            clean architecture, and building solutions that solve real-world
+            problems.
           </p>
           <div className="hero__links">
             <a
@@ -68,36 +70,43 @@ function Home() {
         </div>
         <div className="hero__gradient" aria-hidden="true" />
       </section>
-
+  
       <section className="skills" id="skills" ref={skillsRef}>
-        <h2 className="skills__title reveal">Skills</h2>
-        <div className="skills__grid">
-          <article className="skills__card reveal">
-            <h3 className="skills__card-title">Front-End</h3>
-            <p className="skills__card-text">
-              JavaScript, React (Router, Hooks), HTML5, CSS3
-            </p>
-          </article>
-          <article className="skills__card reveal">
-            <h3 className="skills__card-title">Back-End</h3>
-            <p className="skills__card-text">
-              Node.js, PostgreSQL, Express
-            </p>
-          </article>
-          <article className="skills__card reveal">
-            <h3 className="skills__card-title">Tools & Testing</h3>
-            <p className="skills__card-text">
-              Mocha, Chai, Git, GitHub, Heroku, Vercel
-            </p>
-          </article>
-          <article className="skills__card reveal">
-            <h3 className="skills__card-title">More</h3>
-            <p className="skills__card-text">
-              RESTful APIs, unit testing, algorithms & data structures, Java
-            </p>
-          </article>
-        </div>
-      </section>
+  <h2 className="skills__title reveal">Technical Skills</h2>
+  <div className="skills__grid">
+    <article className="skills__card reveal">
+      <h3 className="skills__card-title">Front-End Development</h3>
+      <p className="skills__card-text">
+        JavaScript (ES6+), React (Hooks, Router), HTML5, CSS3, responsive UI
+        development, component-based architecture
+      </p>
+    </article>
+
+    <article className="skills__card reveal">
+      <h3 className="skills__card-title">Back-End Development</h3>
+      <p className="skills__card-text">
+        Node.js, Express.js, PostgreSQL, RESTful API design, server-side
+        architecture
+      </p>
+    </article>
+
+    <article className="skills__card reveal">
+      <h3 className="skills__card-title">Tools & Development Workflow</h3>
+      <p className="skills__card-text">
+        Git, GitHub, Vercel, Heroku, modern development workflows, deployment
+        and version control
+      </p>
+    </article>
+
+    <article className="skills__card reveal">
+      <h3 className="skills__card-title">Engineering Foundations</h3>
+      <p className="skills__card-text">
+        Unit testing (Mocha, Chai), algorithms & data structures, debugging,
+        clean code practices, Java
+      </p>
+    </article>
+  </div>
+</section>
     </div>
   );
 }
